@@ -6,7 +6,7 @@
         <div class="collapse show" id="collapseExample">
             <div class="card card-body">
 
-                <form class="row">
+                <form action="/provider/search" class="row">
 
                     <input type="hidden" name="action" value="search">
                     <div class="col-md-3">

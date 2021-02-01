@@ -13,6 +13,14 @@ class ProviderController extends Controller
 
         return view('providers.index', compact('providers'));
     }
+
+    public function search(Request $request)
+    {
+        $providers = Provider::where('name', 'like', '%'. $request->get('keyword'). '%')->paginate(10);
+
+        return view('providers.index', compact('providers'));
+    }
+
     public function create()
     {
         return view('providers.create');

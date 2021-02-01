@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('user/search', [UserController::class, 'searchUser']);
-Route::get('provider/search', [ProviderController::class, 'searchProvider']);
+Route::get('provider/search', [ProviderController::class, 'search']);
 
 Route::get('/', function () {
     return redirect()->route('product.index');
