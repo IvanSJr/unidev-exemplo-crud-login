@@ -37,31 +37,24 @@
         <div class="row mt-5">
             <div class="col-md-6">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nome do usuário</label>
+                    <label for="name" class="form-label">Nome do Fornecedor</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Ex.: Fulano de tal" required>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Email do usuário</label>
+                    <label for="name" class="form-label">Email do Fornecedor</label>
                     <input type="text" class="form-control" id="email" name="email" placeholder="Ex.: fulanodetal@gmail.com" required>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Ex.: digite sua senha" required>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Confirme sua senha</label>
-                    <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Ex.: digite sua senha" required>
+            <div class="row">
+                <div class="col-mb-3">
+                    <label for="inputFone" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md">
-                    <button type="submit" class="btn btn-success">Registrar produto</button>
+                    <button type="submit" class="btn btn-success">Registrar fornecedor</button>
                 </div>
             </div>
     </form>

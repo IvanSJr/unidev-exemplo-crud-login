@@ -1,5 +1,7 @@
 @extends('layout.template')
 @section('main')
+
+@include('providers.partials.search')
 <div class="row">
     <div class="col-md d-flex justify-content-between align-items-center">
         <h1>Listagem de Fornecedores</h1>
