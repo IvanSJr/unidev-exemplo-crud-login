@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('user/', [UserController::class, 'index']);
+Route::get('user/create', [UserController::class, 'create']);
+Route::post('/user/store',[UserController::class, 'store']);
+Route::get('user/search', [UserController::class, 'searchUser']);
 
 Route::get('/', function () {
     return redirect()->route('product.index');
@@ -33,3 +38,5 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/user', [UserController::class, 'index']);
     Route::resource('product', ProductController::class);
 });
+
+
