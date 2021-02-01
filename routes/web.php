@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ Route::get('user/', [UserController::class, 'index']);
 Route::get('user/create', [UserController::class, 'create']);
 Route::post('/user/store',[UserController::class, 'store']);
 Route::get('user/search', [UserController::class, 'searchUser']);
+Route::get('/Providers', [ProviderController::class, 'index']);
 
 Route::get('/', function () {
     return redirect()->route('product.index');

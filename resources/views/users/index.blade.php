@@ -33,4 +33,7 @@
                 </tbody>
         </table>
     </div>
+    <div class="mt-5">
+        {{$users->links()}}
+    </div>
 @endsection
