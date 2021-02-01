@@ -12,4 +12,8 @@ class ProviderController extends Controller
 
         return view('providers.index', compact('providers'));
     }
+    public function create()
+    {
+        return view('providers.create');
+    }
 }

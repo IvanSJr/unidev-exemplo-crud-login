@@ -16,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('user/', [UserController::class, 'index']);
-Route::get('user/create', [UserController::class, 'create']);
-Route::post('/user/store',[UserController::class, 'store']);
+// Route::get('user/', [UserController::class, 'index']);
+// Route::get('user/create', [UserController::class, 'create']);
+// Route::post('/user/store',[UserController::class, 'store']);
 Route::get('user/search', [UserController::class, 'searchUser']);
-Route::get('/Providers', [ProviderController::class, 'index']);
+Route::get('/provider', [ProviderController::class, 'index']);
+Route::get('/provider/create', [ProviderController::class, 'index']);
 
 Route::get('/', function () {
     return redirect()->route('product.index');
@@ -39,6 +40,7 @@ Route::any('/register', function() {
 Route::middleware(['auth'])->group(function() {
     Route::get('/user', [UserController::class, 'index']);
     Route::resource('product', ProductController::class);
+    Route::resource('user', UserController::class);
 });
 
 

@@ -24,7 +24,7 @@
                 <div class="navbar-nav me-auto">
                     <a class="nav-link {{ (request()->segment(1) === 'product') ? 'active' : '' }}" href="{{ route('product.index') }}">Produtos</a>
                     <a class="nav-link {{ (request()->segment(1) === 'user') ? 'active' : '' }}" href="/user">Usuarios</a>
-                    <a class="nav-link {{ (request()->segment(1) === 'Providers') ? 'active' : '' }}" href="/Providers">Fornecedores</a>
+                    <a class="nav-link {{ (request()->segment(1) === 'Providers') ? 'active' : '' }}" href="/provider">Fornecedores</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
 

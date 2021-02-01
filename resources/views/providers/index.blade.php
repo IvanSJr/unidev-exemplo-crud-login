@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-md d-flex justify-content-between align-items-center">
         <h1>Listagem de Fornecedores</h1>
-        <a href="/user/create" class="btn btn-success btn-unidev">Cadastrar novo</a>
+        <a href="/provider/create" class="btn btn-success btn-unidev">Cadastrar novo</a>
     </div>
 </div>
 <div class="table-responsive">
@@ -24,10 +24,10 @@
                 <td>{{ $provider->name }}</td>
                 <td>{{ $provider->email }}</td>
                 <td>{{ $provider->phone }}</td>
-                {{-- <td>
+                <td>
                     <a class="btn btn-primary btn-sm" href="{{ route('product.edit', $provider->id) }}">Editar</a>
                     <a class="btn btn-danger btn-sm" onclick="deleteInDatabase('{{ route('product.destroy', $provider->id) }}')">Excluir</a>
-                </td> --}}
+                </td>
             </tr>
             @endforeach
             </tbody>
